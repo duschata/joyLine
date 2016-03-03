@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project joyLine with libraries in sub-folder">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="/home/tom/Arbeitsfläche/joyline/joyline.jar">
+            <manifest>
+                <attribute name="Main-Class" value="de.toms_toy.joyLine.gui.swt.MainWindow"/>
+                <attribute name="Class-Path" value=". joyline_lib/swt.jar joyline_lib/junit-4.11.jar joyline_lib/hamcrest-core-1.3.jar joyline_lib/log4j-1.2.16.jar"/>
+            </manifest>
+            <fileset dir="/home/tom/src/java/projects/eclipse_indigo/joyLine/target/classes"/>
+        </jar>
+        <delete dir="/home/tom/Arbeitsfläche/joyline/joyline_lib"/>
+        <mkdir dir="/home/tom/Arbeitsfläche/joyline/joyline_lib"/>
+        <copy file="/home/tom/src/java/projects/eclipse_indigo/joyLine/swt/linux_64/swt.jar" todir="/home/tom/Arbeitsfläche/joyline/joyline_lib"/>
+        <copy file="/home/tom/.m2/repository/junit/junit/4.11/junit-4.11.jar" todir="/home/tom/Arbeitsfläche/joyline/joyline_lib"/>
+        <copy file="/home/tom/.m2/repository/org/hamcrest/hamcrest-core/1.3/hamcrest-core-1.3.jar" todir="/home/tom/Arbeitsfläche/joyline/joyline_lib"/>
+        <copy file="/home/tom/.m2/repository/log4j/log4j/1.2.16/log4j-1.2.16.jar" todir="/home/tom/Arbeitsfläche/joyline/joyline_lib"/>
+    	<copy file="/home/tom/src/java/projects/eclipse_indigo/joyLine/resources/summertime.xjl" todir="/home/tom/Arbeitsfläche/joyline/"/>
+    </target>
+</project>

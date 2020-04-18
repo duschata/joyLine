@@ -1,6 +1,5 @@
 package de.toms_toy.joyLine.model;
 
-public interface MusicalSymbol
-{
-	String getSymbol();
+public interface MusicalSymbol {
+    String getSymbol();
 }

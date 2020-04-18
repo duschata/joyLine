@@ -12,84 +12,73 @@ import de.toms_toy.joyLine.constant.Interval;
 import de.toms_toy.joyLine.constant.Note;
 
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "chord", propOrder = { "chordStructure", "root", "chordNotesMap" })
-public class Chord
-{
-	private Note root;
-	private ChordStructure chordStructure;
-	private Map<Integer, String> chordNotesMap = new HashMap<Integer, String>();
+@XmlType(name = "chord", propOrder = {"chordStructure", "root", "chordNotesMap"})
+public class Chord {
+    private Note root;
+    private ChordStructure chordStructure;
+    private Map<Integer, String> chordNotesMap = new HashMap<Integer, String>();
 
-	public Chord()
-	{}
-	
-	public Chord(Note root, ChordStructure chordStructure)
-	{
-		this.root = root;
-		this.chordStructure = chordStructure;
-		initChordNoteMap();
-	}
+    public Chord() {
+    }
 
-	private void initChordNoteMap()
-	{
+    public Chord(Note root, ChordStructure chordStructure) {
+        this.root = root;
+        this.chordStructure = chordStructure;
+        initChordNoteMap();
+    }
 
-		chordNotesMap.clear();
-		int rootOffset = root.getChromaticDegree();
+    private void initChordNoteMap() {
 
-		for (Interval interval : chordStructure.getIntervals())
-		{
-			Note note = Note.getChromaticNoteByDegree(rootOffset + interval.getOffset());
+        chordNotesMap.clear();
+        int rootOffset = root.getChromaticDegree();
 
-			chordNotesMap.put(note.getChromaticDegree(), interval.getName());
+        for (Interval interval : chordStructure.getIntervals()) {
+            Note note = Note.getChromaticNoteByDegree(rootOffset + interval.getOffset());
 
-		}
-	}
+            chordNotesMap.put(note.getChromaticDegree(), interval.getName());
 
-	public String getIntervallNameByDegree(int degree)
-	{
-		String intervalName = chordNotesMap.get(degree);
-		if (intervalName == null)
-			return "";
+        }
+    }
 
-		return intervalName;
-	}
+    public String getIntervallNameByDegree(int degree) {
+        String intervalName = chordNotesMap.get(degree);
+        if (intervalName == null)
+            return "";
 
-	@Override
-	public String toString()
-	{
-		String stringRepresentation = "";
+        return intervalName;
+    }
 
-		int rootOffset = root.getChromaticDegree();
+    @Override
+    public String toString() {
+        String stringRepresentation = "";
 
-		for (Interval interval : chordStructure.getIntervals())
-		{
-			Note note = Note.getChromaticNoteByDegree(rootOffset + interval.getOffset());
+        int rootOffset = root.getChromaticDegree();
 
-			stringRepresentation += note.getName() + " [" + note.getChromaticDegree() + "](" + interval.getName() + ")";
-		}
+        for (Interval interval : chordStructure.getIntervals()) {
+            Note note = Note.getChromaticNoteByDegree(rootOffset + interval.getOffset());
 
-		return stringRepresentation;
-	}
+            stringRepresentation += note.getName() + " [" + note.getChromaticDegree() + "](" + interval.getName() + ")";
+        }
 
-	public Note getRoot()
-	{
-		return root;
-	}
+        return stringRepresentation;
+    }
 
-	public void setRoot(Note root)
-	{
-		this.root = root;
-		initChordNoteMap();
-	}
+    public Note getRoot() {
+        return root;
+    }
 
-	public ChordStructure getChordStructure()
-	{
-		return chordStructure;
-	}
+    public void setRoot(Note root) {
+        this.root = root;
+        initChordNoteMap();
+    }
 
-	public void setChordStructure(ChordStructure chordStructure)
-	{
-		this.chordStructure = chordStructure;
-		initChordNoteMap();
-	}
+    public ChordStructure getChordStructure() {
+        return chordStructure;
+    }
+
+    public void setChordStructure(ChordStructure chordStructure) {
+        this.chordStructure = chordStructure;
+        initChordNoteMap();
+    }
 
 }

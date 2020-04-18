@@ -7,38 +7,32 @@ import javax.xml.bind.annotation.XmlType;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "chordNote", propOrder = {
-    "chromaticDegree",
-    "intervalName"
+        "chromaticDegree",
+        "intervalName"
 })
-public class ChordNote
-{
-	private int chromaticDegree;
-	private String intervalName;
+public class ChordNote {
+    private int chromaticDegree;
+    private String intervalName;
 
-	public ChordNote(int chromaticDegree, String intervalName)
-	{
-		this.chromaticDegree = chromaticDegree;
-		this.intervalName = intervalName;
-	}
+    public ChordNote(int chromaticDegree, String intervalName) {
+        this.chromaticDegree = chromaticDegree;
+        this.intervalName = intervalName;
+    }
 
-	public int getChromaticDegree()
-	{
-		return chromaticDegree;
-	}
+    public int getChromaticDegree() {
+        return chromaticDegree;
+    }
 
-	public void setChromaticDegree(int chromaticDegree)
-	{
-		this.chromaticDegree = chromaticDegree;
-	}
+    public void setChromaticDegree(int chromaticDegree) {
+        this.chromaticDegree = chromaticDegree;
+    }
 
-	public String getIntervalName()
-	{
-		return intervalName;
-	}
+    public String getIntervalName() {
+        return intervalName;
+    }
 
-	public void setIntervalName(String intervalName)
-	{
-		this.intervalName = intervalName;
-	}
+    public void setIntervalName(String intervalName) {
+        this.intervalName = intervalName;
+    }
 
 }

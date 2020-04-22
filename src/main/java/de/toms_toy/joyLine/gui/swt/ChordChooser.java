@@ -66,7 +66,7 @@ public class ChordChooser extends Shell {
      * Create contents of the shell.
      */
     protected void createContents() {
-        setText("Akkord auswählen");
+        setText("Akkord ausw\u00e4hlen");
         setImage(SWTResourceManager.getImage(this.getClass(), "/notes.png"));
         setSize(450, 300);
 
@@ -115,7 +115,7 @@ public class ChordChooser extends Shell {
             }
         });
         editButton.setBounds(35, 173, 76, 26);
-        editButton.setText("ändern");
+        editButton.setText("\u00e4ndern");
 
         Button newButton = new Button(this, SWT.NONE);
         newButton.addMouseListener(new MouseAdapter() {

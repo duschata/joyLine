@@ -40,7 +40,7 @@ public enum ChordStructure {
     @XmlEnumValue("Dominant7_#5Arp")
     Dominant7_s5Arp("Dominant7#5 Arp", "7/#5", _1, _3, s5),
     @XmlEnumValue("Major7Arp")
-    Major7Arp("Major7 Arp", " Δ ", _1, _3, _5, M7),
+    Major7Arp("Major7 Arp", " \u0394 ", _1, _3, _5, M7),
     @XmlEnumValue("Minor7Full")
     Minor7Full("Minor7 Full ", "-7", _1, b3, _5, _6, _7),
     @XmlEnumValue("Dominant7Full")
@@ -48,7 +48,7 @@ public enum ChordStructure {
     @XmlEnumValue("Alt")
     Alt("Alt", "alt", _1, b9, s9, _3, b5, s5, _7),
     @XmlEnumValue("Major7Full")
-    Major7Full("Major7 Full", " Δ ", _1, _3, _5, M7, _9);
+    Major7Full("Major7 Full", " \u0394 ", _1, _3, _5, M7, _9);
 
     private Interval[] intervals;
     private String shortName;

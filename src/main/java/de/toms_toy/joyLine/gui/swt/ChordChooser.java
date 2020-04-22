@@ -115,7 +115,7 @@ public class ChordChooser extends Shell {
             }
         });
         editButton.setBounds(35, 173, 76, 26);
-        editButton.setText("\u00e4ndern");
+        editButton.setText("\u00c4ndern");
 
         Button newButton = new Button(this, SWT.NONE);
         newButton.addMouseListener(new MouseAdapter() {
@@ -127,7 +127,7 @@ public class ChordChooser extends Shell {
                 close();
             }
         });
-        newButton.setText("neu");
+        newButton.setText("Neu");
         newButton.setBounds(142, 173, 76, 26);
 
     }

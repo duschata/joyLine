@@ -185,20 +185,20 @@ public class MainWindow {
         shell.setMenuBar(menu);
 
         MenuItem mntmNewSubmenu = new MenuItem(menu, SWT.CASCADE);
-        mntmNewSubmenu.setText("File");
+        mntmNewSubmenu.setText("Datei");
 
         Menu menu_1 = new Menu(mntmNewSubmenu);
         mntmNewSubmenu.setMenu(menu_1);
 
         MenuItem openMenuItem = new MenuItem(menu_1, SWT.NONE);
-        openMenuItem.setText("Open");
+        openMenuItem.setText("\u00d6ffnen");
         openMenuItem.setImage(SWTResourceManager.getImage(MainWindow.class, "/open.png"));
         openMenuItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent selectionEvent) {
 
                 FileDialog dialog = new FileDialog(shell, SWT.OPEN);
-                dialog.setFilterNames(new String[]{"JoyLine", "All Files (*.*)"});
+                dialog.setFilterNames(new String[]{"JoyLine", "Alle Dateien (*.*)"});
                 dialog.setFilterExtensions(new String[]{"*.xjl", "*.*"});
 
                 if (lastDirectory == null)
@@ -239,9 +239,9 @@ public class MainWindow {
         saveMenuItem.addSelectionListener(new SelectionAdapter() {
             @Override
             public void widgetSelected(SelectionEvent e) {
-                Logger.getLogger(getClass()).debug("Save...");
+                Logger.getLogger(getClass()).debug("Speichern...");
                 FileDialog dialog = new FileDialog(shell, SWT.SAVE);
-                dialog.setFilterNames(new String[]{"JoyLine", "All Files (*.*)"});
+                dialog.setFilterNames(new String[]{"JoyLine", "Alle Dateien (*.*)"});
                 dialog.setFilterExtensions(new String[]{"*.xjl", "*.*"});
 
                 if (lastDirectory == null)
@@ -291,7 +291,7 @@ public class MainWindow {
 
             }
         });
-        saveMenuItem.setText("Save");
+        saveMenuItem.setText("Speichern");
         saveMenuItem.setImage(SWTResourceManager.getImage(MainWindow.class, "/save.png"));
 
         MenuItem exportMenuItem = new MenuItem(menu_1, SWT.NONE);
@@ -300,7 +300,7 @@ public class MainWindow {
             public void widgetSelected(SelectionEvent e) {
                 Logger.getLogger(getClass()).debug("Export...");
                 FileDialog dialog = new FileDialog(shell, SWT.SAVE);
-                dialog.setFilterNames(new String[]{"CSV", "All Files (*.*)"});
+                dialog.setFilterNames(new String[]{"CSV", "Alle Dateien (*.*)"});
                 dialog.setFilterExtensions(new String[]{"*.csv", "*.*"});
 
                 if (lastDirectory == null)
@@ -350,7 +350,7 @@ public class MainWindow {
 
             }
         });
-        exportMenuItem.setText("Export");
+        exportMenuItem.setText("Exportieren");
         exportMenuItem.setImage(SWTResourceManager.getImage(MainWindow.class, "/csv.png"));
 
         MenuItem mntmNewItem_1 = new MenuItem(menu_1, SWT.NONE);
@@ -366,7 +366,7 @@ public class MainWindow {
 
             }
         });
-        mntmNewItem_1.setText("Close");
+        mntmNewItem_1.setText("Schlie\u00dfen");
         mntmNewItem_1.setImage(SWTResourceManager.getImage(MainWindow.class, "/close.png"));
 
     }

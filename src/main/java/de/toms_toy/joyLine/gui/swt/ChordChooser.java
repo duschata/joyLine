@@ -114,7 +114,7 @@ public class ChordChooser extends Shell {
                 close();
             }
         });
-        editButton.setBounds(35, 173, 76, 26);
+        editButton.setBounds(35, 173, 76, 29);
         editButton.setText("\u00c4ndern");
 
         Button newButton = new Button(this, SWT.NONE);
@@ -128,7 +128,7 @@ public class ChordChooser extends Shell {
             }
         });
         newButton.setText("Neu");
-        newButton.setBounds(142, 173, 76, 26);
+        newButton.setBounds(142, 173, 76, 29);
 
     }
 

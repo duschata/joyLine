@@ -23,12 +23,14 @@ import javax.xml.bind.annotation.XmlType;
 public enum ChordStructure {
     @XmlEnumValue("Minor6Arp")
     Minor6Arp("Minor6 Arp", "-6", _1, b3, _5, _6),
-	@XmlEnumValue("Minor6_7Arp")
-	Minor6_7Arp("Minor6/7 Arp", "-6", _1, b3, _5, _6, _7),
+    @XmlEnumValue("Minor6_7Arp")
+    Minor6_7Arp("Minor6/7 Arp", "-6/7", _1, b3, _5, _6, _7),
     @XmlEnumValue("Minor7Arp")
     Minor7Arp("Minor7 Arp", "-7", _1, b3, _5, _7),
     @XmlEnumValue("Minor7_9Arp")
-    Minor7_9Arp("Minor7/9 Arp", "-7", _1, _9, b3, _5, _7),
+    Minor7_9Arp("Minor7/9 Arp", "-7/9", _1, _9, b3, _5, _7),
+    @XmlEnumValue("Minor6_7_9Arp")
+    Minor6_7_9Arp("Minor6/7/9 Arp", "-6/7/9", _1, _9, b3, _5, _6, _7),
     @XmlEnumValue("Minor7_5bArp")
     Minor7_5bArp("Minor7b5 Arp", "-7b5", _1, b3, b5, _7),
     @XmlEnumValue("Dominant7Arp")

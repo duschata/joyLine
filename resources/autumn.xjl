@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <measureComposite>
     <chords>
-        <chordStructure>Minor7Arp</chordStructure>
+        <chordStructure>Minor7_9Arp</chordStructure>
         <root>A</root>
         <chordNotesMap>
             <entry>
@@ -20,10 +20,14 @@
                 <key>9</key>
                 <value>1</value>
             </entry>
+            <entry>
+                <key>11</key>
+                <value>9</value>
+            </entry>
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Dominant7Full</chordStructure>
+        <chordStructure>Alt</chordStructure>
         <root>D</root>
         <chordNotesMap>
             <entry>
@@ -39,10 +43,6 @@
                 <value>b9</value>
             </entry>
             <entry>
-                <key>4</key>
-                <value>9</value>
-            </entry>
-            <entry>
                 <key>5</key>
                 <value>#9</value>
             </entry>
@@ -53,10 +53,6 @@
             <entry>
                 <key>8</key>
                 <value>b5</value>
-            </entry>
-            <entry>
-                <key>9</key>
-                <value>5</value>
             </entry>
             <entry>
                 <key>10</key>
@@ -131,16 +127,12 @@
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Dominant7Full</chordStructure>
+        <chordStructure>Alt</chordStructure>
         <root>B</root>
         <chordNotesMap>
             <entry>
                 <key>0</key>
                 <value>b9</value>
-            </entry>
-            <entry>
-                <key>1</key>
-                <value>9</value>
             </entry>
             <entry>
                 <key>2</key>
@@ -153,10 +145,6 @@
             <entry>
                 <key>5</key>
                 <value>b5</value>
-            </entry>
-            <entry>
-                <key>6</key>
-                <value>5</value>
             </entry>
             <entry>
                 <key>7</key>
@@ -239,16 +227,12 @@
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Dominant7Full</chordStructure>
+        <chordStructure>Alt</chordStructure>
         <root>B</root>
         <chordNotesMap>
             <entry>
                 <key>0</key>
                 <value>b9</value>
-            </entry>
-            <entry>
-                <key>1</key>
-                <value>9</value>
             </entry>
             <entry>
                 <key>2</key>
@@ -261,10 +245,6 @@
             <entry>
                 <key>5</key>
                 <value>b5</value>
-            </entry>
-            <entry>
-                <key>6</key>
-                <value>5</value>
             </entry>
             <entry>
                 <key>7</key>
@@ -325,7 +305,7 @@
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Minor7Arp</chordStructure>
+        <chordStructure>Minor7_9Arp</chordStructure>
         <root>A</root>
         <chordNotesMap>
             <entry>
@@ -344,10 +324,14 @@
                 <key>9</key>
                 <value>1</value>
             </entry>
+            <entry>
+                <key>11</key>
+                <value>9</value>
+            </entry>
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Dominant7Full</chordStructure>
+        <chordStructure>Alt</chordStructure>
         <root>D</root>
         <chordNotesMap>
             <entry>
@@ -363,10 +347,6 @@
                 <value>b9</value>
             </entry>
             <entry>
-                <key>4</key>
-                <value>9</value>
-            </entry>
-            <entry>
                 <key>5</key>
                 <value>#9</value>
             </entry>
@@ -377,10 +357,6 @@
             <entry>
                 <key>8</key>
                 <value>b5</value>
-            </entry>
-            <entry>
-                <key>9</key>
-                <value>5</value>
             </entry>
             <entry>
                 <key>10</key>
@@ -455,16 +431,12 @@
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Dominant7Full</chordStructure>
+        <chordStructure>Alt</chordStructure>
         <root>B</root>
         <chordNotesMap>
             <entry>
                 <key>0</key>
                 <value>b9</value>
-            </entry>
-            <entry>
-                <key>1</key>
-                <value>9</value>
             </entry>
             <entry>
                 <key>2</key>
@@ -477,10 +449,6 @@
             <entry>
                 <key>5</key>
                 <value>b5</value>
-            </entry>
-            <entry>
-                <key>6</key>
-                <value>5</value>
             </entry>
             <entry>
                 <key>7</key>
@@ -519,28 +487,36 @@
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Minor7Full</chordStructure>
-        <root>D_SHARP_E_FLAT</root>
+        <chordStructure>Alt</chordStructure>
+        <root>A</root>
         <chordNotesMap>
             <entry>
                 <key>0</key>
-                <value>6</value>
+                <value>#9</value>
             </entry>
             <entry>
                 <key>1</key>
-                <value>7</value>
+                <value>3</value>
             </entry>
             <entry>
                 <key>3</key>
+                <value>b5</value>
+            </entry>
+            <entry>
+                <key>5</key>
+                <value>#5</value>
+            </entry>
+            <entry>
+                <key>7</key>
+                <value>7</value>
+            </entry>
+            <entry>
+                <key>9</key>
                 <value>1</value>
             </entry>
             <entry>
-                <key>6</key>
-                <value>b3</value>
-            </entry>
-            <entry>
                 <key>10</key>
-                <value>5</value>
+                <value>b9</value>
             </entry>
         </chordNotesMap>
     </chords>
@@ -567,44 +543,36 @@
         </chordNotesMap>
     </chords>
     <chords>
-        <chordStructure>Dominant7Full</chordStructure>
-        <root>C_SHARP_D_FLAT</root>
+        <chordStructure>Alt</chordStructure>
+        <root>G</root>
         <chordNotesMap>
             <entry>
                 <key>1</key>
-                <value>1</value>
-            </entry>
-            <entry>
-                <key>2</key>
-                <value>b9</value>
-            </entry>
-            <entry>
-                <key>3</key>
-                <value>9</value>
-            </entry>
-            <entry>
-                <key>4</key>
-                <value>#9</value>
-            </entry>
-            <entry>
-                <key>5</key>
-                <value>3</value>
-            </entry>
-            <entry>
-                <key>7</key>
                 <value>b5</value>
             </entry>
             <entry>
-                <key>8</key>
-                <value>5</value>
-            </entry>
-            <entry>
-                <key>9</key>
+                <key>3</key>
                 <value>#5</value>
             </entry>
             <entry>
-                <key>11</key>
+                <key>5</key>
                 <value>7</value>
+            </entry>
+            <entry>
+                <key>7</key>
+                <value>1</value>
+            </entry>
+            <entry>
+                <key>8</key>
+                <value>b9</value>
+            </entry>
+            <entry>
+                <key>10</key>
+                <value>#9</value>
+            </entry>
+            <entry>
+                <key>11</key>
+                <value>3</value>
             </entry>
         </chordNotesMap>
     </chords>

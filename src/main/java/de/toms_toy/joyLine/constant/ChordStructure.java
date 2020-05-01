@@ -1,22 +1,10 @@
 package de.toms_toy.joyLine.constant;
 
-import static de.toms_toy.joyLine.constant.Interval.M7;
-import static de.toms_toy.joyLine.constant.Interval._1;
-import static de.toms_toy.joyLine.constant.Interval._3;
-import static de.toms_toy.joyLine.constant.Interval._4;
-import static de.toms_toy.joyLine.constant.Interval._5;
-import static de.toms_toy.joyLine.constant.Interval._6;
-import static de.toms_toy.joyLine.constant.Interval._7;
-import static de.toms_toy.joyLine.constant.Interval._9;
-import static de.toms_toy.joyLine.constant.Interval.b3;
-import static de.toms_toy.joyLine.constant.Interval.b5;
-import static de.toms_toy.joyLine.constant.Interval.b9;
-import static de.toms_toy.joyLine.constant.Interval.s5;
-import static de.toms_toy.joyLine.constant.Interval.s9;
-
 import javax.xml.bind.annotation.XmlEnum;
 import javax.xml.bind.annotation.XmlEnumValue;
 import javax.xml.bind.annotation.XmlType;
+
+import static de.toms_toy.joyLine.constant.Interval.*;
 
 @XmlType(name = "chordStructure")
 @XmlEnum
@@ -52,6 +40,7 @@ public enum ChordStructure {
     @XmlEnumValue("Major7Full")
     Major7Full("Major7 Full", " \u0394 ", _1, _3, _5, M7, _9);
 
+    private final String value;
     private Interval[] intervals;
     private String shortName;
     private String displayedName;
@@ -67,6 +56,15 @@ public enum ChordStructure {
 
     ChordStructure(String v) {
         value = v;
+    }
+
+    public static ChordStructure fromValue(String v) {
+        for (ChordStructure c : ChordStructure.values()) {
+            if (c.value.equals(v)) {
+                return c;
+            }
+        }
+        throw new IllegalArgumentException(v);
     }
 
     public Interval[] getIntervals() {
@@ -85,19 +83,8 @@ public enum ChordStructure {
         this.shortName = name;
     }
 
-    private final String value;
-
     public String value() {
         return value;
-    }
-
-    public static ChordStructure fromValue(String v) {
-        for (ChordStructure c : ChordStructure.values()) {
-            if (c.value.equals(v)) {
-                return c;
-            }
-        }
-        throw new IllegalArgumentException(v);
     }
 
     public String getDisplayedName() {

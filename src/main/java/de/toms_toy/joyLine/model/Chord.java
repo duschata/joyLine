@@ -1,16 +1,15 @@
 package de.toms_toy.joyLine.model;
 
 
-import java.util.HashMap;
-import java.util.Map;
+import de.toms_toy.joyLine.constant.ChordStructure;
+import de.toms_toy.joyLine.constant.Interval;
+import de.toms_toy.joyLine.constant.Note;
 
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlType;
-
-import de.toms_toy.joyLine.constant.ChordStructure;
-import de.toms_toy.joyLine.constant.Interval;
-import de.toms_toy.joyLine.constant.Note;
+import java.util.HashMap;
+import java.util.Map;
 
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "chord", propOrder = {"chordStructure", "root", "chordNotesMap"})

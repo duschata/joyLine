@@ -48,6 +48,10 @@ public enum Note {
 
     }
 
+    public static Note fromValue(String v) {
+        return valueOf(v);
+    }
+
     public String getName() {
         return name;
     }
@@ -55,11 +59,6 @@ public enum Note {
     public String value() {
         return name();
     }
-
-    public static Note fromValue(String v) {
-        return valueOf(v);
-    }
-
 
     public int getChromaticDegree() {
         return degree % 12;

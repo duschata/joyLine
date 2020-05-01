@@ -27,17 +27,17 @@ public enum Interval {
     private int offset;
     private String name;
 
+    private Interval(int offset, String name) {
+        this.offset = offset;
+        this.name = name;
+    }
+
     public static Interval getByName(String name) {
         for (Interval interval : values()) {
             if (interval.getName().equals(name))
                 return interval;
         }
         return null;
-    }
-
-    private Interval(int offset, String name) {
-        this.offset = offset;
-        this.name = name;
     }
 
     public int getOffset() {

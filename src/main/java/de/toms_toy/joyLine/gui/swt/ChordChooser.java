@@ -1,5 +1,9 @@
 package de.toms_toy.joyLine.gui.swt;
 
+import de.toms_toy.joyLine.constant.ChordStructure;
+import de.toms_toy.joyLine.constant.Note;
+import de.toms_toy.joyLine.model.Chord;
+import de.toms_toy.joyLine.model.MeasureComposite;
 import org.apache.log4j.Logger;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.ModifyEvent;
@@ -12,15 +16,22 @@ import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.wb.swt.SWTResourceManager;
 
-import de.toms_toy.joyLine.constant.ChordStructure;
-import de.toms_toy.joyLine.constant.Note;
-import de.toms_toy.joyLine.model.Chord;
-import de.toms_toy.joyLine.model.MeasureComposite;
-
 public class ChordChooser extends Shell {
 
     private Chord chord;
     private MainWindow parentShell;
+
+    /**
+     * Create the shell.
+     *
+     * @param display
+     */
+    public ChordChooser(Display display) {
+        super(display, SWT.SHELL_TRIM);
+        setLayout(null);
+//		createContents();
+
+    }
 
     public static void main(String[] args) {
         Chord chord = new Chord(Note.C, ChordStructure.Major7Full);
@@ -48,18 +59,6 @@ public class ChordChooser extends Shell {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
-
-    /**
-     * Create the shell.
-     *
-     * @param display
-     */
-    public ChordChooser(Display display) {
-        super(display, SWT.SHELL_TRIM);
-        setLayout(null);
-//		createContents();
-
     }
 
     /**

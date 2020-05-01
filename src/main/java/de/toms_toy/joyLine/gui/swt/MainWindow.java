@@ -362,12 +362,7 @@ public class MainWindow {
             @Override
             public void widgetSelected(SelectionEvent e) {
                 Logger.getLogger(getClass()).debug("close...");
-
-                chords.clear();
-
-                chords.add(new Chord(Note.C, ChordStructure.Major7Arp));
-                refreshTableItems();
-
+                shell.close();
             }
         });
         mntmNewItem_1.setText("Schlie\u00dfen");

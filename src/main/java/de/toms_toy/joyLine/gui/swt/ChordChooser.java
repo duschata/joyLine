@@ -130,7 +130,24 @@ public class ChordChooser extends Shell {
         newButton.setText("Neu");
         newButton.setBounds(142, 173, 76, 29);
 
+
+        Button deleteButton = new Button(this, SWT.NONE);
+        deleteButton.setText("L\u00f6schen");
+        deleteButton.setBounds(250, 173, 80, 29);
+        deleteButton.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseUp(MouseEvent e) {
+                MeasureComposite chords = parentShell.getChords();
+                int index = chords.indexOf(chord);
+                if (index != 0) {
+                    chords.remove(index);
+                }
+                close();
+            }
+        });
+
     }
+
 
     @Override
     protected void checkSubclass() {

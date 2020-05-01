@@ -185,7 +185,7 @@ public class MainWindow {
 
 		MenuItem newMenuItem = new MenuItem(menu_1, SWT.NONE);
 		newMenuItem.setText("Neu");
-		newMenuItem.setImage(SWTResourceManager.getImage(MainWindow.class, "/notes.png"));
+		newMenuItem.setImage(SWTResourceManager.getImage(MainWindow.class, "/new.png"));
 		newMenuItem.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {

@@ -138,7 +138,7 @@ public class ChordChooser extends Shell {
             public void mouseUp(MouseEvent e) {
                 MeasureComposite chords = parentShell.getChords();
                 int index = chords.indexOf(chord);
-                if (index != 0) {
+                if (chords.size() > 1) {
                     chords.remove(index);
                 }
                 close();

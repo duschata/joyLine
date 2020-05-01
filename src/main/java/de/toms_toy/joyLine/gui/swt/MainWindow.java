@@ -15,6 +15,7 @@ import org.apache.log4j.Logger;
 import org.eclipse.swt.SWT;
 import org.eclipse.swt.events.SelectionAdapter;
 import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.layout.FillLayout;
 import org.eclipse.swt.layout.RowData;
 import org.eclipse.swt.layout.RowLayout;
 import org.eclipse.swt.widgets.Display;
@@ -142,7 +143,7 @@ public class MainWindow {
 
         table.pack();
 
-        shell.pack();
+       // shell.pack();
     }
 
     /**
@@ -157,9 +158,9 @@ public class MainWindow {
         shell.setSize(471, 698);
         shell.setText("Hennings Joy Lines");
         //		Composite composite = new Composite(shell, SWT.BORDER);
-        //        composite.setLayout((new RowLayout(SWT.HORIZONTAL)));
+        //        composite.setLayout((new  Layout(SWT.HORIZONTAL)));
 
-        shell.setLayout((new RowLayout(SWT.HORIZONTAL)));
+    	shell.setLayout(new FillLayout(SWT.HORIZONTAL));
 
         //		table = new Table(shell, SWT.BORDER | SWT.FULL_SELECTION | SWT.V_SCROLL);
         table = new Table(shell, SWT.BORDER | SWT.FULL_SELECTION);

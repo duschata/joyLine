@@ -5,3 +5,10 @@
 build
 @log*
 .idea
+.classpath
+.project
+.settings/
+bin/
+swing2swt.jar
+
+

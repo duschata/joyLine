@@ -17,10 +17,7 @@ import javax.xml.bind.JAXBContext;
 import javax.xml.bind.JAXBException;
 import javax.xml.bind.Marshaller;
 import javax.xml.bind.Unmarshaller;
-import java.io.File;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.StringWriter;
+import java.io.*;
 import java.util.ArrayList;
 
 public class MainWindow {
@@ -32,6 +29,8 @@ public class MainWindow {
     private TableItem[] tableItems = new TableItem[24];
     private String lastDirectory;
     private ArrayList<String[]> csv = new ArrayList<String[]>();
+
+
 
     /**
      * Launch the application.
@@ -334,19 +333,18 @@ public class MainWindow {
                 JAXBContext jaxbContext;
                 FileWriter fw;
                 try {
-                    fw = new FileWriter(dialog.getFilterPath() + File.separator + dialog.getFileName() + extension);
-                    StringWriter sw = new StringWriter();
+
+                    PrintWriter  writer = new PrintWriter(dialog.getFilterPath() + File.separator + dialog.getFileName() + extension, "UTF-8");
                     for (String[] rows : csv) {
                         String separator = "";
                         for (String cell : rows) {
-                            sw.write(separator + "\"" + cell + "\"");
+                            writer.print(separator + "\"" + cell + "\"");
+                            Logger.getLogger(getClass()).debug(cell);
                             separator = ", ";
                         }
-                        sw.write(System.lineSeparator());
+                        writer.print(System.lineSeparator());
                     }
-
-                    fw.write(sw.toString());
-                    fw.close();
+                    writer.close();
                 } catch (IOException e1) {
                     // TODO Auto-generated catch block
                     e1.printStackTrace();

@@ -27,12 +27,14 @@ public enum ChordStructure {
     Minor7_5b_9Arp("Minor7\u266D5\u266E9 Arp", "-7\u266D5\u266E9", _1, b3, b5, _7, _9),
     @XmlEnumValue("Dominant7Arp")
     Dominant7Arp("Dominant7 Arp", " 7 ", _1, _3, _5, _7),
-    @XmlEnumValue("Dominant7Arp")
+    @XmlEnumValue("Dominant7Sus4Arp")
     DominantSus4Arp("DominantSus4 Arp", " sus ", _1, _4, _5, _7),
     @XmlEnumValue("Dominant7_b9Arp")
     Dominant7_b9Arp("Dominant7\u266D9 Arp", " 7/\u266D9 ", b9, _3, _5, _7),
     @XmlEnumValue("Dominant7_#5Arp")
-    Dominant7_s5Arp("Dominant7\u266f5 Arp", "7/\u266f5", _1, _3, s5),
+    Dominant7_s5Arp("Dominant7\u266f5 Arp", "7/\u266f5", _1, _3, s5, _7),
+    @XmlEnumValue("Dominant7_Aug")
+    Dominant7_Aug("Dominant7\u266f5 Aug", "7 Aug", _1, _3, s5),
     @XmlEnumValue("Major7Arp")
     Major7Arp("Major7 Arp", " \u0394 ", _1, _3, _5, M7),
     @XmlEnumValue("Minor7Full")
